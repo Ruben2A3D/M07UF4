@@ -11,9 +11,10 @@ public class Teleport : MonoBehaviour
     if(other.CompareTag("Player"))
     {
         other.GetComponent<CharacterController>().enabled = false;
+
         other.transform.position = Destino.position;
+
         other.GetComponent<CharacterController>().enabled = true;
     }
   }
-
 }
