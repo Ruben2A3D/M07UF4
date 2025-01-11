@@ -26,5 +26,26 @@ public class Seller : MonoBehaviour
             _canBuy = false;
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {  
+        StartCoroutine(WaitForABit());
+    }
+
+    public void ExitStore()
+    {
+        _playerMover.canMove = true;
+        VCamDisable.gameObject.SetActive(true);
+        VCamEnable.gameObject.SetActive(false);
+        Camera.main.GetComponent<CinemachineBrain>().enabled = false;
+        Camera.main.cullingMask |= (1 << 8); //Afegeix la capa 8
+        UI.SetActive(false);   
+    }
+
+    private IEnumerator WaitForABit()
+    {
+        yield return new WaitForSeconds(time);
+        _canBuy = true;
+    }
     
 }
