@@ -27,9 +27,9 @@ public void CrystalCollected()
     Crystals++;
     CrystalText.text = "Crystals: " + Crystals;
 }
-public void CoinCollected()
+public void CoinCollected(int i)
 {
-    Coins++;
+    Coins+= i;
     CoinText.text = "Coins: " + Coins;
 }
 public void ItemCollected(Sprite sprite, int id)

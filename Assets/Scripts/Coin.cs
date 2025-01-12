@@ -6,7 +6,7 @@ public class Coin : MonoBehaviour, ICollectable
 {
     public void OnCollected()
     {
-        GameManager.gameManager.CoinCollected();
+        GameManager.gameManager.CoinCollected(1);
         Destroy(gameObject);
     }
 }
