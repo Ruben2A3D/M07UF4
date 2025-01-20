@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-/*
+
 public class Shop : MonoBehaviour
 {
     public ItemScriptableObject Item1, Item2;
@@ -13,8 +13,8 @@ public class Shop : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
-        Image1.sprite = Item1.image;
-        Image2.sprite = Item2.image;
+        Image1.sprite = Item1.Image;
+        Image2.sprite = Item2.Image;
         CheckIfCanBuy(Item1, textItem1, Buy1);
         CheckIfCanBuy(Item2, TextItem2, Buy2);
     }
@@ -22,16 +22,16 @@ public class Shop : MonoBehaviour
     // Update is called once per frame
     public void BuyItem1()
     {
-        GameManager.gameManager.GetItem(Item1.image, 0);
-        GameManager.gameManager.GetCoinCollected(-Item1.price);
+        GameManager.gameManager.ItemCollected(Item1.Image, 0);
+        GameManager.gameManager.CoinCollected(-Item1.price);
         CheckIfCanBuy(Item1, textItem1, Buy1);
         CheckIfCanBuy(Item2, TextItem2, Buy2);
     }
 
     public void BuyItem2()
     {
-        GameManager.gameManager.GetItem(Item2.image, 1);
-        GameManager.gameManager.GetCoinCollected(-Item2.price);
+        GameManager.gameManager.ItemCollected(Item2.Image, 1);
+        GameManager.gameManager.CoinCollected(-Item2.price);
         CheckIfCanBuy(Item1, textItem1, Buy1);
         CheckIfCanBuy(Item2, TextItem2, Buy2);
     }
@@ -52,4 +52,4 @@ public class Shop : MonoBehaviour
         }
     }
 }
-*/
+
