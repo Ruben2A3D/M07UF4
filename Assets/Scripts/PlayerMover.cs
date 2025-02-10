@@ -40,6 +40,7 @@ public class PlayerMover : MonoBehaviour
     {
         _controller = GetComponent<CharacterController>();
         jumping = false;
+        DontDestroyOnLoad(gameObject);
 
     }
 

@@ -19,6 +19,10 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        /*var playerMover = GetComponent<PlayerMover>();
+        playerMover.canMove = false;
+        playerMover._moveDirection = Vector3.zero;*/
+
         // Verifica si el objeto tiene un tag específico
         switch (other.tag)
         {
