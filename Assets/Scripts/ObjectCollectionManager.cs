@@ -23,7 +23,6 @@ public class ObjectCollectionManager : MonoBehaviour
         switch (objectName)
         {
             case "Battery":
-                Debug.Log(objectName);
                 if (!hasBattery && !hasMagnifyingGlass && !hasAllSeeingEye)
                 {
                     hasBattery = true;
@@ -31,24 +30,25 @@ public class ObjectCollectionManager : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("¡Orden incorrecto! Debes recoger la pila primero.");
+                    Debug.Log("¡Orden incorrecto! La pila debe ser recogida primero.");
+                    CheckOrderAndTeleport();
                 }
                 break;
 
             case "MagnifyingGlass":
-                hasMagnifyingGlass = true;
                 if (hasBattery && !hasMagnifyingGlass && !hasAllSeeingEye)
                 {
+                    hasMagnifyingGlass = true;
                     Debug.Log("Lupa recogida.");
                 }
                 else
                 {
-                    Debug.Log("¡Orden incorrecto! Debes recoger la lupa después de la pila.");
+                    Debug.Log("¡Orden incorrecto! La lupa debe ser recogida después de la pila.");
+                    CheckOrderAndTeleport();
                 }
                 break;
 
             case "AllSeeingEye":
-                Debug.Log(objectName);
                 if (hasBattery && hasMagnifyingGlass && !hasAllSeeingEye)
                 {
                     hasAllSeeingEye = true;
@@ -57,7 +57,8 @@ public class ObjectCollectionManager : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("¡Orden incorrecto! Debes recoger el ojo que todo lo ve al final.");
+                    Debug.Log("¡Orden incorrecto! El ojo que todo lo ve debe ser recogido al final.");
+                    CheckOrderAndTeleport();
                 }
                 break;
 
