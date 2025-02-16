@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Map.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/lightRoomScene.unity
+    path: Assets/Scenes/SalaDeLaLuz.unity
     guid: c5970a9f89b4d4f8b99ef92f92243a8c
   - enabled: 1
-    path: Assets/Scenes/darkRoomScene.unity
+    path: Assets/Scenes/SalaOscura.unity
     guid: 09a7178ace34a4b72941fd06801de916
+  - enabled: 1
+    path: Assets/Scenes/2nLevel.unity
+    guid: 4412502ec068143ec9f38b92daa7acb5
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 50ce98b5da3c5f94c9e96331354a7a61
   m_configObjects: {}
