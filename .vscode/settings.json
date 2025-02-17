@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "M07_UF4.sln"
+    "dotnet.defaultSolution": "M07UF4.sln"
 }
